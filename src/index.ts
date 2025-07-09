@@ -8,6 +8,7 @@ import {
 import { initMusicPlayer } from '$utils/animations/musicPlayer';
 import { initMarker } from '$utils/global/marker';
 import { loadModelViewerScript, resetPosition } from '$utils/global/modalviewer';
+import { popupContact } from '$utils/global/popupContact';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
@@ -15,6 +16,7 @@ window.Webflow.push(() => {
   initMarker();
   loadModelViewerScript();
   resetPosition();
+  popupContact();
 
   /* Music Player */
   initMusicPlayer();
