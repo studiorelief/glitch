@@ -3,3 +3,7 @@
 .form_radio.w-radio:has(.w-form-formradioinput.w--redirected-checked) {
   outline: 2px solid var(--swatch--false-black);
 }
+
+.w-checkbox.form_radio:has(.w-checkbox-input.w--redirected-checked) {
+  outline: 2px solid var(--swatch--false-black);
+}
