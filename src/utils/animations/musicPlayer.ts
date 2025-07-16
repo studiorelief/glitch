@@ -2,7 +2,7 @@ class MusicPlayer {
   private audio: HTMLAudioElement;
   private musicUrls: string[] = [
     // Free music examples - replace with your own music URLs
-    'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav',
+    'https://www.dropbox.com/scl/fi/d54x53o0ygxj34b9wgy04/glitch-music.mp3?rlkey=4ouuhl4x10wz3tpy0276cfm92&st=46rms6i6&dl=1',
     // You can add more music URLs here
   ];
 

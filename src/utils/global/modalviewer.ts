@@ -14,16 +14,23 @@ export function resetPosition() {
     HTMLElement & {
       cameraOrbit: string;
       returnToInitialPosition: number;
+      autoRotate: boolean;
+      autoRotateDelay: number;
+      rotationPerSecond: string;
     }
   >;
 
   if (modelViewers.length === 0) return;
 
-  const initialOrbit = '45deg 67.5deg 45deg';
+  const initialOrbit = '0deg 90deg 45deg';
   const userInteracting = new WeakMap<HTMLElement, boolean>();
 
   modelViewers.forEach((modelViewer) => {
     userInteracting.set(modelViewer, false);
+    // Set auto-rotation properties
+    modelViewer.autoRotate = true;
+    modelViewer.autoRotateDelay = 0;
+    modelViewer.rotationPerSecond = '90deg';
 
     modelViewer.addEventListener('camera-change', () => {
       userInteracting.set(modelViewer, true);

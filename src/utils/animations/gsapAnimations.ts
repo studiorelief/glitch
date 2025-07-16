@@ -63,3 +63,27 @@ export function parallaxAssetImmersive() {
     );
   });
 }
+
+export function parallaxAssetWeb3() {
+  const assets = document.querySelectorAll('.experience_content');
+
+  assets.forEach((asset) => {
+    gsap.fromTo(
+      asset,
+      {
+        y: '5rem',
+      },
+      {
+        scrollTrigger: {
+          markers: false,
+          trigger: '.section_experience',
+          start: '0% 50%',
+          end: '100% 0%',
+          scrub: true,
+        },
+        y: '-5rem',
+        ease: 'none',
+      }
+    );
+  });
+}

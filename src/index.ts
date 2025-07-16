@@ -4,6 +4,7 @@ import {
   loopCircle,
   parallaxAssetGenart,
   parallaxAssetImmersive,
+  parallaxAssetWeb3,
 } from '$utils/animations/gsapAnimations';
 import { initMusicPlayer } from '$utils/animations/musicPlayer';
 import { initMarker } from '$utils/global/marker';
@@ -25,4 +26,5 @@ window.Webflow.push(() => {
   loopCircle();
   parallaxAssetImmersive();
   parallaxAssetGenart();
+  parallaxAssetWeb3();
 });
