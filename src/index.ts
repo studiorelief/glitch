@@ -6,6 +6,7 @@ import {
   parallaxAssetImmersive,
   parallaxAssetWeb3,
 } from '$utils/animations/gsapAnimations';
+import { parallaxAssetImmersiveContent } from '$utils/animations/gsapAnimations';
 import { initLottiePlayer } from '$utils/animations/lottiePlayer';
 import { initMusicPlayer } from '$utils/animations/musicPlayer';
 import { initMarker } from '$utils/global/marker';
@@ -29,6 +30,7 @@ window.Webflow.push(() => {
   parallaxAssetImmersive();
   parallaxAssetGenart();
   parallaxAssetWeb3();
+  parallaxAssetImmersiveContent();
 
   // alert('Hello');
 });
