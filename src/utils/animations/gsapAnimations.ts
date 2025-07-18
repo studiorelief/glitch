@@ -1,7 +1,8 @@
-import gsap from 'gsap';
+import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SplitText } from 'gsap/SplitText';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export function loopCircle() {
   const circles = document.querySelectorAll('.ai_video-circle');
@@ -109,5 +110,40 @@ export function parallaxAssetWeb3() {
         ease: 'none',
       }
     );
+  });
+}
+
+export function splitTextAnimation() {
+  const textSections = document.querySelectorAll('.text-section');
+
+  textSections.forEach((section) => {
+    // Find the main text element within the section
+    const textElement = section.querySelector('h1, h2, h3, h4, h5, h6, p, div') || section;
+
+    // Split text into lines using GSAP SplitText plugin
+    const splitText = new SplitText(textElement, { type: 'lines' });
+
+    // Set initial state for all lines
+    gsap.set(splitText.lines, {
+      opacity: 0,
+      y: '4rem',
+    });
+
+    // Animate lines with stagger
+    gsap.to(splitText.lines, {
+      opacity: 1,
+      y: '0rem',
+      duration: 2,
+      stagger: 0.5,
+      ease: 'power2.out',
+      markers: true,
+      scrollTrigger: {
+        trigger: section,
+        start: 'top 90%',
+        end: 'bottom 65%',
+        toggleActions: 'play none none reverse',
+        scrub: true,
+      },
+    });
   });
 }

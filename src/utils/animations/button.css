@@ -3,7 +3,7 @@
   transition: color 0.3s ease-in-out;
 }
 
-[data-wf--cc---global-button--mode-button---variables='is-primary']:hover .button-mea {
+[data-wf--cc---global-button--mode-button---variables='is-navbar']:hover .button-mea {
   color: var(--_brand---text--brand-blue);
 }
 
